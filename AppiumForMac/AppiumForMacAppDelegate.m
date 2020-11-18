@@ -83,7 +83,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     self.fnKeyGlobalMonitor = [NSEvent addGlobalMonitorForEventsMatchingMask:NSFlagsChangedMask handler:^(NSEvent *event) {
         NSEventModifierFlags newFlags = [NSEvent modifierFlags];
         
-        if (newFlags & NSFunctionKeyMask) {
+        if ((newFlags & NSControlKeyMask) && (newFlags & NSAlternateKeyMask)) {
             // Start a timer to detect how long the function key is held down.
             [self startFnKeyTimer];
         } else {
@@ -100,7 +100,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     self.fnKeyLocalMonitor = [NSEvent addLocalMonitorForEventsMatchingMask:NSFlagsChangedMask handler:^NSEvent *(NSEvent *event) {
         NSEventModifierFlags newFlags = [NSEvent modifierFlags];
         
-        if (newFlags & NSFunctionKeyMask) {
+        if ((newFlags & NSControlKeyMask) && (newFlags & NSAlternateKeyMask)) {
             // Start a timer to detect how long the function key is held down.
             [self startFnKeyTimer];
         } else {

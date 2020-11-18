@@ -60,8 +60,8 @@
 		36D203DB17A5D6B300011A3A /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 36D203C017A5D6B300011A3A /* README.txt */; };
 		36D203DF17A5D8B900011A3A /* AfMHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 36D203DE17A5D8B900011A3A /* AfMHTTPConnection.m */; };
 		36D203E217A5DE7000011A3A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D203E117A5DE7000011A3A /* Security.framework */; };
-		36D7968A17BF1A4B00D1B81E /* PFAssistive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D7968917BF1A4B00D1B81E /* PFAssistive.framework */; };
-		4F31407119662998009BDF33 /* PFAssistive.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 36D7968917BF1A4B00D1B81E /* PFAssistive.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		745A02E5254197DE00917163 /* PFAssistive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745A02E2254197B700917163 /* PFAssistive.framework */; };
+		745A02E6254197DE00917163 /* PFAssistive.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 745A02E2254197B700917163 /* PFAssistive.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C14989BC1E917BF5007D3500 /* NotesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C14989B91E917BF5007D3500 /* NotesWindow.xib */; };
 		C14989BD1E917BF5007D3500 /* NotesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C14989BB1E917BF5007D3500 /* NotesWindowController.m */; };
 		C14EAB301DB452630010E210 /* KeystrokesAndKeyCodes.m in Sources */ = {isa = PBXBuildFile; fileRef = C14EAB2E1DB452630010E210 /* KeystrokesAndKeyCodes.m */; };
@@ -88,7 +88,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4F31407119662998009BDF33 /* PFAssistive.framework in CopyFiles */,
+				745A02E6254197DE00917163 /* PFAssistive.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +195,7 @@
 		36D203DD17A5D8B900011A3A /* AfMHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AfMHTTPConnection.h; sourceTree = "<group>"; };
 		36D203DE17A5D8B900011A3A /* AfMHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AfMHTTPConnection.m; sourceTree = "<group>"; };
 		36D203E117A5DE7000011A3A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		36D7968917BF1A4B00D1B81E /* PFAssistive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PFAssistive.framework; path = Frameworks/PFAssistive.framework; sourceTree = "<group>"; };
+		745A02E2254197B700917163 /* PFAssistive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PFAssistive.framework; path = Frameworks/PFAssistive.framework; sourceTree = "<group>"; };
 		C14989B91E917BF5007D3500 /* NotesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesWindow.xib; sourceTree = "<group>"; };
 		C14989BA1E917BF5007D3500 /* NotesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesWindowController.h; sourceTree = "<group>"; };
 		C14989BB1E917BF5007D3500 /* NotesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesWindowController.m; sourceTree = "<group>"; };
@@ -219,10 +219,10 @@
 			files = (
 				369A0FE817C12F6700D66163 /* libxml2.dylib in Frameworks */,
 				C14EAB331DB453220010E210 /* Carbon.framework in Frameworks */,
+				745A02E5254197DE00917163 /* PFAssistive.framework in Frameworks */,
 				36D203E217A5DE7000011A3A /* Security.framework in Frameworks */,
 				361034BD17A4991C00DB79AA /* ScriptingBridge.framework in Frameworks */,
 				3610348917A4990E00DB79AA /* Cocoa.framework in Frameworks */,
-				36D7968A17BF1A4B00D1B81E /* PFAssistive.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,10 +265,10 @@
 		3610348717A4990E00DB79AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				745A02E2254197B700917163 /* PFAssistive.framework */,
 				C14EAB321DB453220010E210 /* Carbon.framework */,
 				3610348817A4990E00DB79AA /* Cocoa.framework */,
 				3610348C17A4990E00DB79AA /* CoreData.framework */,
-				36D7968917BF1A4B00D1B81E /* PFAssistive.framework */,
 				361034BC17A4991C00DB79AA /* ScriptingBridge.framework */,
 				36D203E117A5DE7000011A3A /* Security.framework */,
 				361034A617A4990F00DB79AA /* SenTestingKit.framework */,
@@ -838,6 +838,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks\"",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppiumForMac/AppiumForMac-Prefix.pch";
@@ -861,6 +862,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks\"",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppiumForMac/AppiumForMac-Prefix.pch";

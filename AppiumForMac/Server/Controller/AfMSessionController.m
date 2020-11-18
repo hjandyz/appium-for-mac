@@ -329,6 +329,10 @@ NSInteger const kPredicateRightOperand = 1;
 
 -(NSArray*) allWindows
 {
+    if (self.currentApplication == nil) {
+        return nil;
+    }
+    
     return [[NSArray arrayWithObject:self.currentApplication] arrayByAddingObjectsFromArray:[self.currentApplication AXWindows]];
 //    return [self.currentApplication AXWindows];
 }
