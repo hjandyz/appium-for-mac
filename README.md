@@ -1,3 +1,9 @@
+# forked Description
+
+Update PFAssistice
+Fix Crash
+Change Fn key to contol+option, bacause some mac use windows keyboards without fn keys.
+
 # Appium For Mac
 
 Appium for Mac can control the native user interface of Mac applications using Selenium / WebDriver and the OS X Accessibility API. Check out the example which will control the calculator app.
